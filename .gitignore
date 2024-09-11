@@ -1,0 +1,23 @@
+# Ignore node_modules (for Node.js projects)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore compiled source code (e.g., .class files for Java, .o files for C++)
+*.class
+*.o
+
+# Ignore IDE settings (for IntelliJ IDEA, CLion, etc.)
+.idea/
+.vscode/
+
+# Ignore build directories (e.g., Gradle, Maven, CMake)
+build/
+target/
+out/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
