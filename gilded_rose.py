@@ -10,6 +10,12 @@ class Item:
 
     def __repr__(self):
         return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
+    
+    # adding eq function for check correctly during the test
+    def __eq__(self, other):
+        if not isinstance(other, Item):
+            return False
+        return self.name == other.name and self.sell_in == other.sell_in and self.quality == other.quality
 
 
 class GildedRose(object):
@@ -17,6 +23,10 @@ class GildedRose(object):
     def __init__(self, items: list[Item]):
         # DO NOT CHANGE THIS ATTRIBUTE!!!
         self.items = items
+        
+    # adding this function for error during test
+    def get_items_by_name(self, name: str):
+        return [item for item in self.items if item.name == name]
 
     def update_quality(self):
         for item in self.items:
