@@ -5,11 +5,12 @@ from gilded_rose import Item, GildedRose
 
 
 class GildedRoseTest(unittest.TestCase):
+    # for default test, change fixme to foo
     def test_foo(self):
         items = [Item("foo", 0, 0)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
-        self.assertEqual("fixme", items[0].name)
+        self.assertEqual("foo", items[0].name)
 
     #Example test
     def test_vest_item_should_decrease_after_one_day(self):
